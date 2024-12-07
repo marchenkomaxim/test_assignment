@@ -6,6 +6,7 @@ npm install
 npm run dev
 
 docker exec -it testcase_app bash
+composer install
 php artisan migrate
 
 дальше в Postman
