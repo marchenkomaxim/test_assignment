@@ -14,7 +14,9 @@ php artisan migrate
 дальше в Postman
 
 Регистрация
+
 http://localhost:8876/api/register POST
+
 
 {
 "name": "Test User",
@@ -23,10 +25,14 @@ http://localhost:8876/api/register POST
 "password_confirmation": "password123"
 }
 
+
 в ответе будет токен, вставляем его в Bearer Token
 
+
 Добавление товара
+
 http://localhost:8876/api/products POST
+
 {
 "title": "Title example2",
 "description": "bla bla bla bla bla bla bla",
@@ -36,48 +42,25 @@ http://localhost:8876/api/products POST
 
 
 Отображение товара
+
 http://localhost:8876/api/products GET
 
+
 Для фильтрации продуктов по категории пишем атрибут "category": "Any category"
+
 Для фильтрации продуктов по цене пишем атрибут "min_price" или "max_price"
+
 Для фильтрации по популярности пишем "popularity": "desc" или "asc", популярность считается по кол-ву комментариев
+
 Пример
-[
-{
-"id": 1,
-"title": "Title example1",
-"description": "bla bla bla bla bla bla bl",
-"price": "11.00",
-"category": "Any category",
-"image": null,
-"created_at": "2024-12-07T12:59:01.000000Z",
-"updated_at": "2024-12-07T12:59:01.000000Z"
-},
-{
-"id": 2,
-"title": "Title example2",
-"description": "bla bla bla bla bla bla blzxczxczxcz",
-"price": "110.00",
-"category": "Any category",
-"image": null,
-"created_at": "2024-12-07T12:59:11.000000Z",
-"updated_at": "2024-12-07T12:59:11.000000Z"
-},
-{
-"id": 3,
-"title": "Title example67",
-"description": "bla bla bla blzxczxczxc123z",
-"price": "55.00",
-"category": "Bad category",
-"image": null,
-"created_at": "2024-12-07T12:59:39.000000Z",
-"updated_at": "2024-12-07T12:59:39.000000Z"
-}
-]
+
+
+
 
 
 
 Добавление комментария
+
 http://localhost:8876/api/comments POST
 {
 "text": "another bad or good review",
@@ -85,6 +68,7 @@ http://localhost:8876/api/comments POST
 }
 
 Покупка
+
 http://localhost:8876/api/purchases POST
 
 {
@@ -95,6 +79,7 @@ http://localhost:8876/api/purchases POST
 }
 
 Для просмотра своей истории покупок нужно получить авторизоватся и перейти по
+
 http://localhost:8876/api/purchases GET
 
 Покупки отображаются от новых к старым
