@@ -1,5 +1,6 @@
 
 Как запустить
+
 docker-compose up -d
 
 (composer install
@@ -7,6 +8,7 @@ npm install
 npm run dev)
 
 docker exec -it testcase_app bash
+
 php artisan migrate
 
 дальше в Postman
